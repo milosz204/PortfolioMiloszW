@@ -6,3 +6,4 @@ https://github.com/milosz204/PortfolioMiloszW/blob/main/Automat_tokarski/Automat
 
 # Serwosilownik z wykrojnikiem
 
+main/Podajnik%20do%20Wirth/Podajnik%20do%20wirth.jpg
