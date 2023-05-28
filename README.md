@@ -5,3 +5,4 @@ https://github.com/milosz204/PortfolioMiloszW/blob/main/Automat_tokarski/Automat
 # Automat tokarski
 
 # Serwosilownik z wykrojnikiem
+
