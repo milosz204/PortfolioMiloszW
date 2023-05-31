@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-v2.25.xsd">
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity VendorID="0x0101" DeviceID="0x7701">
+			<InfoText TextId="IDT_FamilyDescription"/>
+			<VendorName Value="SICK AG"/>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="Encoders" ProductFamily="SICK"/>
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem ID="DAP 1" PhysicalSlots="0..1" ModuleIdentNumber="0x00000301" MinDeviceInterval="32" DNS_CompatibleName="AFS60A" FixedInSlots="0" ObjectUUID_LocalIndex="1" RequiredSchemaVersion="V2.2" DeviceAccessSupported="true">
+					<ModuleInfo CategoryRef="AFx60A">
+						<Name TextId="IDT_TextId_DAP1"/>
+						<InfoText TextId="IDT_ModInfo_InfoTextId_DAP1"/>
+						<VendorName Value="SICK AG"/>
+						<OrderNumber Value="AFS60A-xxx"/>
+						<HardwareRelease Value="257"/>
+						<SoftwareRelease Value="V01.00.04"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_Subslot_8000"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_Subslot_8001"/>
+						<SubslotItem SubslotNumber="32770" TextId="IDT_Subslot_8002"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="EO_Singleturn" FixedInSlots="1"/>
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 1" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1"/>
+							<ModuleInfo>
+								<Name TextId="IDT_TextId_DAP1"/>
+								<InfoText TextId="IDT_ModInfo_InfoTextId_DAP1"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="IDS_1I" SubslotNumber="32768" SubmoduleIdentNumber="0x0001" SupportedRT_Classes="RT_CLASS_1" TextId="IDT_DAP_InterfaceModule" IsochroneModeSupported="false" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2">
+							<ApplicationRelations NumberOfAdditionalInputCR="0" NumberOfAR="1" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0">
+								<TimingProperties SendClock="32 64 128" ReductionRatio="1 2 4 8 16 32 64 128 256 512"/>
+							</ApplicationRelations>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="IDS_1P1" SubslotNumber="32769" SubmoduleIdentNumber="0x0002" MAUType="100BASETXFD" TextId="IDT_Port1"/>
+						<PortSubmoduleItem ID="IDS_1P2" SubslotNumber="32770" SubmoduleIdentNumber="0x0003" MAUType="100BASETXFD" TextId="IDT_Port2"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP 2" PhysicalSlots="0..1" ModuleIdentNumber="0x00000301" MinDeviceInterval="32" DNS_CompatibleName="AFM60A" FixedInSlots="0" ObjectUUID_LocalIndex="1" RequiredSchemaVersion="V2.25" DeviceAccessSupported="true">
+					<ModuleInfo CategoryRef="AFx60A">
+						<Name TextId="IDT_TextId_DAP2"/>
+						<InfoText TextId="IDT_ModInfo_InfoTextId_DAP2"/>
+						<VendorName Value="SICK AG"/>
+						<OrderNumber Value="AFM60A-xxx"/>
+						<HardwareRelease Value="257"/>
+						<SoftwareRelease Value="V01.00.04"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_Subslot_8000"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_Subslot_8001"/>
+						<SubslotItem SubslotNumber="32770" TextId="IDT_Subslot_8002"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="256" MaxOutputLength="256"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="EO_Multiturn" FixedInSlots="1"/>
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP 2" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1"/>
+							<ModuleInfo>
+								<Name TextId="IDT_TextId_DAP2"/>
+								<InfoText TextId="IDT_ModInfo_InfoTextId_DAP2"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="IDS_2I" SubslotNumber="32768" SubmoduleIdentNumber="0x0001" SupportedRT_Classes="RT_CLASS_1" TextId="IDT_DAP_InterfaceModule" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2">
+							<ApplicationRelations NumberOfAdditionalInputCR="0" NumberOfAR="1" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0">
+								<TimingProperties SendClock="32 64 128" ReductionRatio="1 2 4 8 16 32 64 128 256 512"/>
+							</ApplicationRelations>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="IDS_2P1" SubslotNumber="32769" SubmoduleIdentNumber="0x0002" MAUType="100BASETXFD" TextId="IDT_Port1"/>
+						<PortSubmoduleItem ID="IDS_2P2" SubslotNumber="32770" SubmoduleIdentNumber="0x0003" MAUType="100BASETXFD" TextId="IDT_Port2"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_1"/>
+					</Graphics>
+				</DeviceAccessPointItem>
+			</DeviceAccessPointList>
+			<ModuleList>
+				<ModuleItem ID="EO_Multiturn" ModuleIdentNumber="0x1F040" PhysicalSubslots="2">
+					<ModuleInfo>
+						<Name TextId="IDT_TextId_EO_Multiturn"/>
+						<InfoText TextId="IDT_InfoTextId_EO_Multiturn"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem SubmoduleIdentNumber="0xFFFF" ID="P5" API="15616" FixedInSubslots="1">
+							<IOData IOPS_Length="1" IOCS_Length="1"/>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="48896" Length="31" TransferSequence="1">
+									<Name TextId="IDT_Parameter_Data"/>
+									<Const Data="0x36,0x00,0x00,0x00,0x00,0x00,0x04,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x10,0x00,0x01,0x03,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00"/>
+									<Ref TextId="Code_Sequence" DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" ValueItemTarget="Code_Sequence"/>
+									<Ref TextId="Class_4_Functionality" DataType="Bit" ByteOffset="0" BitOffset="1" DefaultValue="1" ValueItemTarget="Class_4_Enable"/>
+									<Ref TextId="G1_XIST1_Preset_Control" DataType="Bit" ByteOffset="0" BitOffset="2" DefaultValue="1" ValueItemTarget="G1_XIST1_Preset_Control"/>
+									<Ref TextId="Scaling_Function_Control" DataType="Bit" ByteOffset="0" BitOffset="3" DefaultValue="0" ValueItemTarget="Scaling_Function_Control"/>
+									<Ref TextId="Alarm_Channel_Control" DataType="Bit" ByteOffset="0" BitOffset="4" DefaultValue="1" ValueItemTarget="Alarm_Channel_Control"/>
+									<Ref TextId="Compatibility_Mode" DataType="Bit" ByteOffset="0" BitOffset="5" DefaultValue="1" ValueItemTarget="Compatibility_Mode"/>
+									<Ref TextId="Measuring_Units_/_Revolution_High" DataType="Unsigned32" ByteOffset="1" DefaultValue="0000" AllowedValues="0"/>
+									<Ref TextId="Measuring_Units_/_Revolution_Low" DataType="Unsigned32" ByteOffset="5" DefaultValue="262144" AllowedValues="2..262144"/>
+									<Ref TextId="Total_Measuring_Range_High" DataType="Unsigned32" ByteOffset="9" DefaultValue="00000000" AllowedValues="0"/>
+									<Ref TextId="Total_Measuring_Range_Low" DataType="Unsigned32" ByteOffset="13" DefaultValue="1073741824" AllowedValues="2..1073741824"/>
+									<Ref TextId="Master_Lifesign_Failure" DataType="Unsigned8" ByteOffset="17" DefaultValue="1" Changeable="false" AllowedValues="1"/>
+									<Ref TextId="Velocity_Unit" DataType="Unsigned8" ByteOffset="18" DefaultValue="3" ValueItemTarget="Velocity_Unit"/>
+								</ParameterRecordDataItem>
+								<ParameterRecordDataItem Index="4096" Length="15" TransferSequence="2">
+									<Name TextId="IDT_Vendor_Parameter_Data"/>
+									<Const Data="0x00,0x00,0x00,0x08,0x00,0x00,0x00,0x00,0x01,0x05,0xC8,0x00,0x00,0x00,0x00"/>
+									<Ref TextId="IDT_StorePreset" DataType="Bit" ByteOffset="0" BitOffset="7" DefaultValue="0" ValueItemTarget="IDV_StorePreset"/>
+									<Ref TextId="IDT_TransferPreset" DataType="Bit" ByteOffset="0" BitOffset="1" DefaultValue="0" ValueItemTarget="IDV_TransferPreset"/>
+									<Ref TextId="IDT_RoundAxis" DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" ValueItemTarget="IDV_RoundAxis"/>
+									<Ref TextId="IDT_RoundAxisNominator" DataType="Unsigned32" ByteOffset="1" DefaultValue="2048" AllowedValues="1..2048"/>
+									<Ref TextId="IDT_RoundAxisDivisor" DataType="Unsigned32" ByteOffset="5" DefaultValue="1" AllowedValues="1..65535"/>
+									<Ref TextId="IDT_VelocityRefreshTime" DataType="Unsigned8" ByteOffset="9" DefaultValue="5" AllowedValues="1..100"/>
+									<Ref TextId="IDT_VelocityIntegrationTime" DataType="Unsigned8" ByteOffset="10" DefaultValue="200" AllowedValues="1..200"/>
+									<Ref TextId="IDT_PresetVal" DataType="Unsigned32" ByteOffset="11" DefaultValue="0" AllowedValues="0..4294967295"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo>
+								<Name TextId="IDT_TextId_PAP"/>
+								<InfoText TextId="IDT_InfoTextId_PAP"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_Mod_81" AllowedInSubslots="2" UsedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_Mod_82" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_Mod_83" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_Mod_84" AllowedInSubslots="2"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem ID="EO_Singleturn" ModuleIdentNumber="0x1F040" PhysicalSubslots="2">
+					<ModuleInfo>
+						<Name TextId="IDT_TextId_EO_Singleturn"/>
+						<InfoText TextId="IDT_InfoTextId_EO_Singleturn"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem SubmoduleIdentNumber="0xFFFF" ID="P6" API="15616" FixedInSubslots="1">
+							<IOData IOPS_Length="1" IOCS_Length="1"/>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="48896" Length="31" TransferSequence="1">
+									<Name TextId="IDT_Parameter_Data"/>
+									<Const Data="0x36,0x00,0x00,0x00,0x00,0x00,0x04,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x01,0x03,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00"/>
+									<Ref TextId="Code_Sequence" DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" ValueItemTarget="Code_Sequence"/>
+									<Ref TextId="Class_4_Functionality" DataType="Bit" ByteOffset="0" BitOffset="1" DefaultValue="1" ValueItemTarget="Class_4_Enable"/>
+									<Ref TextId="G1_XIST1_Preset_Control" DataType="Bit" ByteOffset="0" BitOffset="2" DefaultValue="1" ValueItemTarget="G1_XIST1_Preset_Control"/>
+									<Ref TextId="Scaling_Function_Control" DataType="Bit" ByteOffset="0" BitOffset="3" DefaultValue="0" ValueItemTarget="Scaling_Function_Control"/>
+									<Ref TextId="Alarm_Channel_Control" DataType="Bit" ByteOffset="0" BitOffset="4" DefaultValue="1" ValueItemTarget="Alarm_Channel_Control"/>
+									<Ref TextId="Compatibility_Mode" DataType="Bit" ByteOffset="0" BitOffset="5" DefaultValue="1" ValueItemTarget="Compatibility_Mode"/>
+									<Ref TextId="Measuring_Units_/_Revolution_High" DataType="Unsigned32" ByteOffset="1" DefaultValue="0000" AllowedValues="0"/>
+									<Ref TextId="Measuring_Units_/_Revolution_Low" DataType="Unsigned32" ByteOffset="5" DefaultValue="262144" AllowedValues="2..262144"/>
+									<Ref TextId="Total_Measuring_Range_High" DataType="Unsigned32" ByteOffset="9" DefaultValue="00000000" Changeable="false"/>
+									<Ref TextId="Total_Measuring_Range_Low" DataType="Unsigned32" ByteOffset="13" DefaultValue="262144" Changeable="true" AllowedValues="2..262144"/>
+									<Ref TextId="Master_Lifesign_Failure" DataType="Unsigned8" ByteOffset="17" DefaultValue="1" Changeable="false" AllowedValues="1"/>
+									<Ref TextId="Velocity_Unit" DataType="Unsigned8" ByteOffset="18" DefaultValue="3" ValueItemTarget="Velocity_Unit"/>
+								</ParameterRecordDataItem>
+								<ParameterRecordDataItem Index="4096" Length="15" TransferSequence="2">
+									<Name TextId="IDT_Vendor_Parameter_Data"/>
+									<Const Data="0x00,0x00,0x00,0x08,0x00,0x00,0x00,0x00,0x01,0x01,0xC8,0x00,0x00,0x00,0x00"/>
+									<Ref TextId="IDT_StorePreset" DataType="Bit" ByteOffset="0" BitOffset="7" DefaultValue="0" ValueItemTarget="IDV_StorePreset"/>
+									<Ref TextId="IDT_TransferPreset" DataType="Bit" ByteOffset="0" BitOffset="1" DefaultValue="0" ValueItemTarget="IDV_TransferPreset"/>
+									<Ref TextId="IDT_RoundAxis" DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" ValueItemTarget="IDV_RoundAxis" AllowedValues="0" Changeable="false"/>
+									<Ref TextId="IDT_RoundAxisNominator" DataType="Unsigned32" ByteOffset="1" DefaultValue="1" AllowedValues="1" Changeable="false"/>
+									<Ref TextId="IDT_RoundAxisDivisor" DataType="Unsigned32" ByteOffset="5" DefaultValue="1" AllowedValues="1" Changeable="false"/>
+									<Ref TextId="IDT_VelocityRefreshTime" DataType="Unsigned8" ByteOffset="9" DefaultValue="1" AllowedValues="1..2"/>
+									<Ref TextId="IDT_VelocityIntegrationTime" DataType="Unsigned8" ByteOffset="10" DefaultValue="200" AllowedValues="1..200"/>
+									<Ref TextId="IDT_PresetVal" DataType="Unsigned32" ByteOffset="11" DefaultValue="0" AllowedValues="0..4294967295"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo>
+								<Name TextId="IDT_TextId_PAP"/>
+								<InfoText TextId="IDT_InfoTextId_PAP"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_Mod_81" AllowedInSubslots="2" UsedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_Mod_82" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_Mod_83" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_Mod_84" AllowedInSubslots="2"/>
+					</UseableSubmodules>
+				</ModuleItem>
+			</ModuleList>
+			<SubmoduleList>
+				<SubmoduleItem ID="ID_Mod_81" SubmoduleIdentNumber="0x51" API="15616">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input Consistency="All items consistency">
+							<DataItem DataType="OctetString" TextId="IDT_Std_Telegram_81_Input" Length="12" UseAsBits="true"/>
+						</Input>
+						<Output Consistency="All items consistency">
+							<DataItem DataType="OctetString" TextId="IDT_Std_Telegram_Output" Length="4" UseAsBits="true"/>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="IDT_TextId_Module_81"/>
+						<InfoText TextId="IDT_InfoTextId_Module_81"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem ID="ID_Mod_82" SubmoduleIdentNumber="0x52" API="15616">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input Consistency="All items consistency">
+							<DataItem DataType="OctetString" TextId="IDT_Std_Telegram_82_Input" Length="14" UseAsBits="true"/>
+						</Input>
+						<Output Consistency="All items consistency">
+							<DataItem DataType="OctetString" TextId="IDT_Std_Telegram_Output" Length="4" UseAsBits="true"/>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="IDT_TextId_Module_82"/>
+						<InfoText TextId="IDT_InfoTextId_Module_82"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem ID="ID_Mod_83" SubmoduleIdentNumber="0x53" API="15616">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input Consistency="All items consistency">
+							<DataItem DataType="OctetString" TextId="IDT_Std_Telegram_83_Input" Length="16" UseAsBits="true"/>
+						</Input>
+						<Output Consistency="All items consistency">
+							<DataItem DataType="OctetString" TextId="IDT_Std_Telegram_Output" Length="4" UseAsBits="true"/>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="IDT_TextId_Module_83"/>
+						<InfoText TextId="IDT_InfoTextId_Module_83"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem ID="ID_Mod_84" SubmoduleIdentNumber="0x54" API="15616">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input Consistency="All items consistency">
+							<DataItem DataType="OctetString" TextId="IDT_Std_Telegram_84_Input" Length="20" UseAsBits="true"/>
+						</Input>
+						<Output Consistency="All items consistency">
+							<DataItem DataType="OctetString" TextId="IDT_Std_Telegram_Output" Length="4" UseAsBits="true"/>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="IDT_TextId_Module_84"/>
+						<InfoText TextId="IDT_InfoTextId_Module_84"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+			</SubmoduleList>
+			<ValueList>
+				<ValueItem ID="Code_Sequence">
+					<Help TextId="Help_Code_Sequence"/>
+					<Assignments>
+						<Assign Content="0" TextId="IDT_CW"/>
+						<Assign Content="1" TextId="IDT_CCW"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="Class_4_Enable">
+					<Help TextId="Help_Class_4_Functionality"/>
+					<Assignments>
+						<Assign Content="1" TextId="Enable"/>
+						<Assign Content="0" TextId="Disable"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="G1_XIST1_Preset_Control">
+					<Help TextId="Help_G1_XIST1_Preset_Control"/>
+					<Assignments>
+						<Assign Content="0" TextId="Enable"/>
+						<Assign Content="1" TextId="Disable"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="Scaling_Function_Control">
+					<Help TextId="Help_Scaling_Function_Control"/>
+					<Assignments>
+						<Assign Content="1" TextId="Enable"/>
+						<Assign Content="0" TextId="Disable"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="Alarm_Channel_Control">
+					<Help TextId="Help_Alarm_Channel_Control"/>
+					<Assignments>
+						<Assign Content="1" TextId="Enable"/>
+						<Assign Content="0" TextId="Disable"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="Compatibility_Mode">
+					<Help TextId="Help_Compatibility_Mode"/>
+					<Assignments>
+						<Assign Content="1" TextId="IDT_ProfileV4"/>
+						<Assign Content="0" TextId="IDT_ProfileV3"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="Velocity_Unit">
+					<Help TextId="Help_Velocity_Unit"/>
+					<Assignments>
+						<Assign Content="0" TextId="Steps/s"/>
+						<Assign Content="1" TextId="Steps/100ms"/>
+						<Assign Content="2" TextId="Steps/10ms"/>
+						<Assign Content="3" TextId="Rpm"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="IDV_RoundAxis">
+					<Help TextId="IDT_HELP_RoundAxis"/>
+					<Assignments>
+						<Assign Content="1" TextId="Enable"/>
+						<Assign Content="0" TextId="Disable"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="IDV_StorePreset">
+					<Help TextId="IDT_HELP_StorePreset"/>
+					<Assignments>
+						<Assign Content="1" TextId="IDT_P971"/>
+						<Assign Content="0" TextId="IDT_AutoSave"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="IDV_TransferPreset">
+					<Help TextId="IDT_HELP_TransferPreset"/>
+					<Assignments>
+						<Assign Content="1" TextId="Enable"/>
+						<Assign Content="0" TextId="Disable"/>
+					</Assignments>
+				</ValueItem>
+			</ValueList>
+			<ChannelDiagList>
+				<ProfileChannelDiagItem API="15616" ErrorType="36864">
+					<Name TextId="IDT_Name_ErrorType36864"/>
+					<Help TextId="IDT_HelpName_ErrorType36864"/>
+				</ProfileChannelDiagItem>
+				<ProfileChannelDiagItem API="15616" ErrorType="36865">
+					<Name TextId="IDT_Name_ErrorType36865"/>
+					<Help TextId="IDT_HelpName_ErrorType36865"/>
+				</ProfileChannelDiagItem>
+				<ProfileChannelDiagItem API="15616" ErrorType="36866">
+					<Name TextId="IDT_Name_ErrorType36866"/>
+					<Help TextId="IDT_HelpName_ErrorType36866"/>
+				</ProfileChannelDiagItem>
+				<ProfileChannelDiagItem API="15616" ErrorType="36874">
+					<Name TextId="IDT_Name_ErrorType36874"/>
+					<Help TextId="IDT_HelpName_ErrorType36874"/>
+				</ProfileChannelDiagItem>
+				<ProfileChannelDiagItem API="15616" ErrorType="36881">
+					<Name TextId="IDT_Name_ErrorType36881"/>
+					<Help TextId="IDT_HelpName_ErrorType36881"/>
+				</ProfileChannelDiagItem>
+			</ChannelDiagList>
+			<GraphicsList>
+				<GraphicItem ID="ID_Graph_1" GraphicFile="GSDML-0101-7701-AFM"/>
+			</GraphicsList>
+			<CategoryList>
+				<CategoryItem ID="AFx60A" TextId="IDT_Cat_AFx60A"/>
+			</CategoryList>
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<!--General-->
+					<Text TextId="IDT_FamilyDescription" Value="AFS/AFM optical encoder family"/>
+					<!--Error codes-->
+					<Text TextId="IDT_Name_ErrorType36881" Value="Parameter assignment error"/>
+					<Text TextId="IDT_Name_ErrorType36864" Value="Memory Error"/>
+					<Text TextId="IDT_Name_ErrorType36865" Value="Overvoltage"/>
+					<Text TextId="IDT_Name_ErrorType36866" Value="Under voltage"/>
+					<Text TextId="IDT_Name_ErrorType36874" Value="Position Error"/>
+					<Text TextId="IDT_HelpName_ErrorType36881" Value="Parameter assignment error"/>
+					<Text TextId="IDT_HelpName_ErrorType36864" Value="The internal memory is corrupted."/>
+					<Text TextId="IDT_HelpName_ErrorType36865" Value="The power supply of the device is over the allowed limit."/>
+					<Text TextId="IDT_HelpName_ErrorType36866" Value="The power supply of the device is under the allowed limit."/>
+					<Text TextId="IDT_HelpName_ErrorType36874" Value="Error in the position calculation or the position is not reliable."/>
+					<!--DAPs-->
+					<Text TextId="IDT_Subslot_8000" Value="X1"/>
+					<Text TextId="IDT_Subslot_8001" Value="P1"/>
+					<Text TextId="IDT_Subslot_8002" Value="P2"/>
+					<Text TextId="IDT_DAP_InterfaceModule" Value="Interface"/>
+					<Text TextId="IDT_TextId_PAP" Value="Parameter Access Point"/>
+					<Text TextId="IDT_Port1" Value="Port 1"/>
+					<Text TextId="IDT_Port2" Value="Port 2"/>
+					<Text TextId="IDT_TextId_DAP1" Value="AFS60A Singleturn encoder Advanced 18 Bit V1.0"/>
+					<Text TextId="IDT_ModInfo_InfoTextId_DAP1" Value="AFS60A Singleturn encoder Advanced 18 Bit V1.0"/>
+					<Text TextId="IDT_TextId_Module_DAP1" Value="SICK AFS Singleturn encoder Advanced 18 Bit V1.0"/>
+					<Text TextId="IDT_TextId_DAP2" Value="AFM60A Multiturn encoder Advanced 30 Bit V1.0"/>
+					<Text TextId="IDT_ModInfo_InfoTextId_DAP2" Value="AFM60A Multiturn encoder Advanced 30 Bit V1.0"/>
+					<Text TextId="IDT_TextId_Module_DAP2" Value="SICK AFM Multiturn encoder Advanced 30 Bit V1.0"/>
+					<!--Modules-->
+					<Text TextId="IDT_TextId_EO_Singleturn" Value="EO Singleturn"/>
+					<Text TextId="IDT_TextId_EO_Multiturn" Value="EO Multiturn"/>
+					<Text TextId="IDT_InfoTextId_Module_Multiturn" Value="PROFINET IO Device SICK AFM Multiturn encoder 30 Bit"/>
+					<Text TextId="IDT_InfoTextId_Module_Singleturn" Value="PROFINET IO Device SICK AFS Singleturn encoder 18 Bit"/>
+					<Text TextId="IDT_InfoTextId_EO_Singleturn" Value="SICK AFS Singleturn encoder 18 Bit"/>
+					<Text TextId="IDT_InfoTextId_EO_Multiturn" Value="SICK AFM Multiturn encoder 30 Bit"/>
+					<!--Name of data item-->
+					<Text TextId="IDT_Input_DataItem_2" Value="Input 2 bytes"/>
+					<Text TextId="IDT_Output_DataItem_2" Value="Output 2 bytes"/>
+					<Text TextId="IDT_Input_DataItem_4" Value="Input 4 bytes"/>
+					<Text TextId="IDT_Input_DataItem_8" Value="Input 8 bytes"/>
+					<!--Standard telegrams-->
+					<Text TextId="IDT_Std_Telegram_81_Input" Value="Std Telegram 81 Input"/>
+					<Text TextId="IDT_Std_Telegram_82_Input" Value="Std Telegram 82 Input"/>
+					<Text TextId="IDT_Std_Telegram_83_Input" Value="Std Telegram 83 Input"/>
+					<Text TextId="IDT_Std_Telegram_84_Input" Value="Std Telegram 84 Input"/>
+					<Text TextId="IDT_InfoTextId_Module_81" Value="Standard Telegram 81"/>
+					<Text TextId="IDT_InfoTextId_Module_82" Value="Standard Telegram 82"/>
+					<Text TextId="IDT_InfoTextId_Module_83" Value="Standard Telegram 83"/>
+					<Text TextId="IDT_InfoTextId_Module_84" Value="Standard Telegram 84"/>
+					<Text TextId="IDT_TextId_Module_81" Value="Standard Telegram 81"/>
+					<Text TextId="IDT_TextId_Module_82" Value="Standard Telegram 82"/>
+					<Text TextId="IDT_TextId_Module_83" Value="Standard Telegram 83"/>
+					<Text TextId="IDT_TextId_Module_84" Value="Standard Telegram 84"/>
+					<Text TextId="IDT_Std_Telegram_Output" Value="Std Telegram Output"/>
+					<!--Parameters-->
+					<Text TextId="IDT_InfoTextId_PAP" Value="Parameter Access Point"/>
+					<Text TextId="IDT_CW" Value="CW (0)"/>
+					<Text TextId="IDT_CCW" Value="CCW (1)"/>
+					<Text TextId="Enable" Value="Enable"/>
+					<Text TextId="Disable" Value="Disable"/>
+					<Text TextId="IDT_AutoSave" Value="Auto save"/>
+					<Text TextId="IDT_P971" Value="P971"/>
+					<Text TextId="IDT_ProfileV3" Value="Profile version 3"/>
+					<Text TextId="IDT_ProfileV4" Value="Profile version 4"/>
+					<Text TextId="Steps/s" Value="Steps/s"/>
+					<Text TextId="Steps/100ms" Value="Steps/100ms"/>
+					<Text TextId="Steps/10ms" Value="Steps/10ms"/>
+					<Text TextId="Rpm" Value="Revolutions per Minute"/>
+					<Text TextId="IDT_Parameter_Data" Value="Parameter Data"/>
+					<Text TextId="Code_Sequence" Value="Code Sequence"/>
+					<Text TextId="Help_Code_Sequence" Value="The parameter Code Sequence determines the counting direction of the encoder"/>
+					<Text TextId="Class_4_Functionality" Value="Class 4 Functionality"/>
+					<Text TextId="Help_Class_4_Functionality" Value="This parameter enables/disables the measuring task functions Scaling, Preset and Code sequence."/>
+					<Text TextId="G1_XIST1_Preset_Control" Value="G1_XIST1 Preset Control"/>
+					<Text TextId="Help_G1_XIST1_Preset_Control" Value="This parameter controls the application of a preset value on the G1_XIST1 actual value. This parameter will be ignored if  'Class 4 functionality' is disabled."/>
+					<Text TextId="Scaling_Function_Control" Value="Scaling Function Control"/>
+					<Text TextId="Help_Scaling_Function_Control" Value="This parameter enables/disables the Scaling function."/>
+					<Text TextId="Alarm_Channel_Control" Value="Alarm Channel Control (Profile V3)"/>
+					<Text TextId="Help_Alarm_Channel_Control" Value="This parameter enables/disables the encoder specific alarms. Only Valid If Compatibility Mode Is Enabled."/>
+					<Text TextId="Compatibility_Mode" Value="Encoder Profile V3 Compatibility"/>
+					<Text TextId="Help_Compatibility_Mode" Value="This parameter enables/disables the Encoder Profile V3 Compatibility"/>
+					<Text TextId="Measuring_Units_/_Revolution_Low" Value="Measuring Units per Revolution LSDW"/>
+					<Text TextId="Measuring_Units_/_Revolution_High" Value="Measuring Units per Revolution MSDW"/>
+					<Text TextId="Help_Measuring_Units_/_Revolution" Value="The singleturn resolution in measuring step"/>
+					<Text TextId="Total_Measuring_Range_Low" Value="Total Measuring Range LSDW"/>
+					<Text TextId="Total_Measuring_Range_High" Value="Total Measuring Range MSDW"/>
+					<Text TextId="Help_Total_Measuring_Range" Value="The total measuring range in measuring steps"/>
+					<Text TextId="Master_Lifesign_Failure" Value="Master Lifesign Failure Unit (Profile V3)"/>
+					<Text TextId="Help_Master_Lifesign_Failure" Value="The Maximum Number Of Master Lifesign Tolerated Only Valid If Compatibility Mode Is Enabled"/>
+					<Text TextId="Velocity_Unit" Value="Velocity Measuring Unit (Telegram 82-84)"/>
+					<Text TextId="Help_Velocity_Unit" Value="Definition of the units for the Encoder velocity output value"/>
+					<!--Vendor Parameters-->
+					<Text TextId="IDT_Vendor_Parameter_Data" Value="Vendor specific Parameter Data"/>
+					<Text TextId="IDT_RoundAxis" Value="Round axis (endless shaft, ES) function"/>
+					<Text TextId="IDT_StorePreset" Value="Storage mode for the preset value"/>
+					<Text TextId="IDT_TransferPreset" Value="Transfer preset value"/>
+					<Text TextId="IDT_HELP_TransferPreset" Value="If this parameter is enabled, the preset value will be transfered with the start up parameters."/>
+					<Text TextId="IDT_HELP_StorePreset" Value="This parameter sets the save mode of the preset value to non volatile memory. In 'auto save' mode, the value will be stored automaticaly saved to remanent memory. In P971 mode, the value will be stored using the base mode parameter P971."/>
+					<Text TextId="IDT_HELP_RoundAxis" Value="This parameter enables/disables the Encoder round axis functionality."/>
+					<Text TextId="IDT_RoundAxisNominator" Value="ES: Number of turns, Nominator"/>
+					<Text TextId="IDT_RoundAxisDivisor" Value="ES: Number of turns, Divisor"/>
+					<Text TextId="IDT_VelocityRefreshTime" Value="Velocity filter: sampling rate"/>
+					<Text TextId="IDT_VelocityIntegrationTime" Value="Velocity filter: number of measurements"/>
+					<Text TextId="IDT_PresetVal" Value="Preset value"/>
+					<!--Category-->
+					<Text TextId="IDT_Cat_AFx60A" Value="AFx60A"/>
+				</PrimaryLanguage>
+				<Language xml:lang="de">
+					<!--General-->
+					<Text TextId="IDT_FamilyDescription" Value="AFS/AFM optische Encoder-Familie"/>
+					<!--Error codes-->
+					<Text TextId="IDT_Name_ErrorType36881" Value="Parametrierungsfehler"/>
+					<Text TextId="IDT_Name_ErrorType36864" Value="Speicherfehler"/>
+					<Text TextId="IDT_Name_ErrorType36865" Value="Ueberspannung"/>
+					<Text TextId="IDT_Name_ErrorType36866" Value="Unterspannung"/>
+					<Text TextId="IDT_Name_ErrorType36874" Value="Positionsfehler"/>
+					<Text TextId="IDT_HelpName_ErrorType36881" Value="Parametrierungsfehler"/>
+					<Text TextId="IDT_HelpName_ErrorType36864" Value="Der interne Speicher ist fehlerhaft."/>
+					<Text TextId="IDT_HelpName_ErrorType36865" Value="Die Spannungsversorgung is ausserhalb des erlaubten Bereichs."/>
+					<Text TextId="IDT_HelpName_ErrorType36866" Value="Die Spannungsversorgung is ausserhalb des erlaubten Bereichs."/>
+					<Text TextId="IDT_HelpName_ErrorType36874" Value="Ein Fehler ist bei der Berechnung der Position aufgetreten oder der aktuelle Positionswert ist nicht zuverlaessig."/>
+					<!--DAPs-->
+					<Text TextId="IDT_Subslot_8000" Value="X1"/>
+					<Text TextId="IDT_Subslot_8001" Value="P1"/>
+					<Text TextId="IDT_Subslot_8002" Value="P2"/>
+					<Text TextId="IDT_DAP_InterfaceModule" Value="Interface"/>
+					<Text TextId="IDT_TextId_PAP" Value="Parameter Access Point"/>
+					<Text TextId="IDT_Port1" Value="Port 1"/>
+					<Text TextId="IDT_Port2" Value="Port 2"/>
+					<Text TextId="IDT_TextId_DAP1" Value="AFS60A Singleturn encoder Advanced 18 Bit V1.0"/>
+					<Text TextId="IDT_ModInfo_InfoTextId_DAP1" Value="AFS60A Singleturn encoder Advanced 18 Bit V1.0"/>
+					<Text TextId="IDT_TextId_Module_DAP1" Value="SICK AFS Singleturn encoder Advanced 18 Bit V1.0"/>
+					<Text TextId="IDT_TextId_DAP2" Value="AFM60A Multiturn encoder Advanced 30 Bit V1.0"/>
+					<Text TextId="IDT_ModInfo_InfoTextId_DAP2" Value="AFM60A Multiturn encoder Advanced 30 Bit V1.0"/>
+					<Text TextId="IDT_TextId_Module_DAP2" Value="SICK AFM Multiturn encoder Advanced 30 Bit V1.0"/>
+					<!--Modules-->
+					<Text TextId="IDT_TextId_EO_Singleturn" Value="EO Singleturn"/>
+					<Text TextId="IDT_TextId_EO_Multiturn" Value="EO Multiturn"/>
+					<Text TextId="IDT_InfoTextId_Module_Multiturn" Value="PROFINET IO Device SICK AFM Multiturn encoder 30 Bit"/>
+					<Text TextId="IDT_InfoTextId_Module_Singleturn" Value="PROFINET IO Device SICK AFS Singleturn encoder 18 Bit"/>
+					<Text TextId="IDT_InfoTextId_EO_Singleturn" Value="SICK AFS Singleturn encoder 18 Bit"/>
+					<Text TextId="IDT_InfoTextId_EO_Multiturn" Value="SICK AFM Multiturn encoder 30 Bit"/>
+					<!--Name of data item-->
+					<Text TextId="IDT_Input_DataItem_2" Value="Eingang 2 bytes"/>
+					<Text TextId="IDT_Output_DataItem_2" Value="Ausgang 2 bytes"/>
+					<Text TextId="IDT_Input_DataItem_4" Value="Eingang 4 bytes"/>
+					<Text TextId="IDT_Input_DataItem_8" Value="Ausgang 8 bytes"/>
+					<!--Standard telegrams-->
+					<Text TextId="IDT_Std_Telegram_81_Input" Value="Std Telegram 81 Eingang"/>
+					<Text TextId="IDT_Std_Telegram_82_Input" Value="Std Telegram 82 Eingang"/>
+					<Text TextId="IDT_Std_Telegram_83_Input" Value="Std Telegram 83 Eingang"/>
+					<Text TextId="IDT_Std_Telegram_84_Input" Value="Std Telegram 84 Eingang"/>
+					<Text TextId="IDT_InfoTextId_Module_81" Value="Standard Telegram 81"/>
+					<Text TextId="IDT_InfoTextId_Module_82" Value="Standard Telegram 82"/>
+					<Text TextId="IDT_InfoTextId_Module_83" Value="Standard Telegram 83"/>
+					<Text TextId="IDT_InfoTextId_Module_84" Value="Standard Telegram 84"/>
+					<Text TextId="IDT_TextId_Module_81" Value="Standard Telegram 81"/>
+					<Text TextId="IDT_TextId_Module_82" Value="Standard Telegram 82"/>
+					<Text TextId="IDT_TextId_Module_83" Value="Standard Telegram 83"/>
+					<Text TextId="IDT_TextId_Module_84" Value="Standard Telegram 84"/>
+					<Text TextId="IDT_Std_Telegram_Output" Value="Std Telegram Ausgang"/>
+					<!--Parameters-->
+					<Text TextId="IDT_InfoTextId_PAP" Value="Parameter Access Point"/>
+					<Text TextId="IDT_CW" Value="CW (0)"/>
+					<Text TextId="IDT_CCW" Value="CCW (1)"/>
+					<Text TextId="Enable" Value="Enable"/>
+					<Text TextId="Disable" Value="Disable"/>
+					<Text TextId="IDT_AutoSave" Value="Auto save"/>
+					<Text TextId="IDT_P971" Value="P971"/>
+					<Text TextId="IDT_ProfileV3" Value="Profil Version 3"/>
+					<Text TextId="IDT_ProfileV4" Value="Profil Version 4"/>
+					<Text TextId="Steps/s" Value="Schritte/s"/>
+					<Text TextId="Steps/100ms" Value="Schritte/100ms"/>
+					<Text TextId="Steps/10ms" Value="Schritte/10ms"/>
+					<Text TextId="Rpm" Value="Umdrehungen pro Minute"/>
+					<Text TextId="IDT_Parameter_Data" Value="Parametrierungsdaten"/>
+					<Text TextId="Code_Sequence" Value="Code Sequence"/>
+					<Text TextId="Help_Code_Sequence" Value="Code Sequence bestimmt die Zählrichtung des Encoders"/>
+					<Text TextId="Class_4_Functionality" Value="Class 4 Funktionalitaet"/>
+					<Text TextId="Help_Class_4_Functionality" Value="Dieser Parameter aktiviert oder deaktiviert die Funktionen Skalierung, Preset und Code sequence."/>
+					<Text TextId="G1_XIST1_Preset_Control" Value="G1_XIST1 Preset Control"/>
+					<Text TextId="Help_G1_XIST1_Preset_Control" Value="Der Parameter bestimmt , ob ein Presetwert auf G1_XIST1 einfluss hat. Wird ignoriert wenn 'Class 4 Funktionalitaet'  aktiviert wurde."/>
+					<Text TextId="Scaling_Function_Control" Value="Skalierung"/>
+					<Text TextId="Help_Scaling_Function_Control" Value="Aktiviert oder deaktiviert die Skalierungsfunktion."/>
+					<Text TextId="Alarm_Channel_Control" Value="Alarm Channel Control (Profil V3)"/>
+					<Text TextId="Help_Alarm_Channel_Control" Value="Der Parameter aktiviert oder deaktiviert die encoderspezifische Alarms. Wird nur beruecksichtigt wenn 'Compatibility Mode' aktiviert wurde."/>
+					<Text TextId="Compatibility_Mode" Value="Encoder Profile V3 Compatibility"/>
+					<Text TextId="Help_Compatibility_Mode" Value="Der Parameter aktiviert oder deaktiviert die Compatibilitaet mit dem Encoder Profil V3."/>
+					<Text TextId="Measuring_Units_/_Revolution_Low" Value="Messbereich pro Umdrehung LSDW"/>
+					<Text TextId="Measuring_Units_/_Revolution_High" Value="Messbereich pro Umdrehung MSDW"/>
+					<Text TextId="Help_Measuring_Units_/_Revolution" Value="Die Aufloesung pro Umdrehung in Messschritte."/>
+					<Text TextId="Total_Measuring_Range_Low" Value="Gesamtmessbereich LSDW"/>
+					<Text TextId="Total_Measuring_Range_High" Value="Gesamtmessbereich  MSDW"/>
+					<Text TextId="Help_Total_Measuring_Range" Value="Der Gesamtmessbereich in Schritte."/>
+					<Text TextId="Master_Lifesign_Failure" Value="Master Lifesign Failure Unit (Profil V3)"/>
+					<Text TextId="Help_Master_Lifesign_Failure" Value="Maximalerwert fuer 'Number Of Master Lifesign'. Nur wenn 'Compatibility Mode' wurde aktiviert"/>
+					<Text TextId="Velocity_Unit" Value="Messeinheit fuer Geschwindigkeit (Telegramm 82-84)"/>
+					<Text TextId="Help_Velocity_Unit" Value="Bestimmt die Einheit fuer die Geschwindigkietsmessung."/>
+					<!--Vendor Parameters-->
+					<Text TextId="IDT_Vendor_Parameter_Data" Value="Herstellerspezifische Parametrierungsdaten"/>
+					<Text TextId="IDT_RoundAxis" Value="Rundachse Funktionalitaet."/>
+					<Text TextId="IDT_StorePreset" Value="Speichermodus fue den Presetwert."/>
+					<Text TextId="IDT_TransferPreset" Value="Presetwert uebertragen"/>
+					<Text TextId="IDT_HELP_TransferPreset" Value="Wenn aktiv wird der Presetwert mit den Parametrierungsdaten uebertragen."/>
+					<Text TextId="IDT_HELP_StorePreset" Value="Stellt den Speichermodus für den Presetwert ein. In Modus 'auto' wird der Wert automatisch in den nicht flüchtigen Speicher gespeichert. In Modules 'P971' wird der Wert nur dann gespeichert, wenn der Parameter P971 beschrieben wird."/>
+					<Text TextId="IDT_HELP_RoundAxis" Value="Der Parameter aktiviert bzw. deaktiviert die Rundachsfunktionalitaet."/>
+					<Text TextId="IDT_RoundAxisNominator" Value="ES: Anzahl Umdrehungen, Zähler."/>
+					<Text TextId="IDT_RoundAxisDivisor" Value="ES: Anzal Umdrehungen, Nenner"/>
+					<Text TextId="IDT_VelocityRefreshTime" Value="Geschwindigkeitsfilter: Abtastintervall[ms]"/>
+					<Text TextId="IDT_VelocityIntegrationTime" Value="Geschwindigkeitsfilter: Anzahl der Messungen"/>
+					<Text TextId="IDT_PresetVal" Value="Presetwert"/>
+					<!--Category-->
+					<Text TextId="IDT_Cat_AFx60A" Value="AFx60A"/>
+				</Language>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>
