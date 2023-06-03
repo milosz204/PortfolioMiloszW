@@ -9,11 +9,8 @@ Projekty do pobrania dostępne [tutaj](/Altium/).
 
 # Efekt końcowy
 
+Poniższe filmy przedstawiają zautomatyzowane przeze mnie urządzenia pracujące w produkcji
+
 [![AT](/Zdjecia_screeny/AT.png)](https://youtu.be/qzBgTlh2_7I)
 
-
-
-
-
-
-[![Now in Android: 55](https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg)](https://www.youtube.com/watch?v=Hc79sDi3f0U "Now in Android: 55")
+[![Serwosilownik_liniowy](/Zdjecia_screeny/Serwosilownik_liniowy.png)](https://youtu.be/CQ2cTGiEdMgI)
