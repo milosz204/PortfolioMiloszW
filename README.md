@@ -6,6 +6,8 @@ Projekty do pobrania dostępne [tutaj](/TIAPortal).
 # Schematy elektryczne - Altium
 Projekty do pobrania dostępne [tutaj](/Altium/).
 
+![Altium1](/Zdjecia_screeny/Altium1.png)
+![Altium2](/Zdjecia_screeny/Altium2.png)
 
 # Efekt końcowy
 
