@@ -1,10 +1,10 @@
 # Projekty TIA Portal
-Projekty do pobrania dostępne ![tutaj](/TIAPortal).
+Projekty do pobrania dostępne [tutaj](/TIAPortal).
 
 
 
 # Schematy elektryczne - Altium
-Projekty do pobrania dostępne ![tutaj](/Altium/).
+Projekty do pobrania dostępne [tutaj](/Altium/).
 
 
 # 
