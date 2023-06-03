@@ -9,7 +9,7 @@ Projekty do pobrania dostępne [tutaj](/Altium/).
 
 # Efekt końcowy
 
-[![AT]](https://youtu.be/qzBgTlh2_7I)
+![AT](https://youtu.be/qzBgTlh2_7I)
 
 
 
