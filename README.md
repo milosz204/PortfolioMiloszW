@@ -15,3 +15,8 @@ Poniższe filmy przedstawiają zautomatyzowane przeze mnie urządzenia pracując
 
 [![AT](/Zdjecia_screeny/AT.png)](https://youtu.be/qzBgTlh2_7I)
 [![Serwosilownik_liniowy](/Zdjecia_screeny/Serwosilownik_liniowy.png)](https://youtu.be/CQ2cTGiEdMgI)
+
+# Galeria
+
+![Galeria1](/Zdjecia_screeny/Szafa_elektryczna_1.jpg)
+![Galeria2](/Zdjecia_screeny/Szafa_elektryczna_2.jpg)
